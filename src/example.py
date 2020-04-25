@@ -1,3 +1,6 @@
+import numpy as np
+import cv2
+
 def warper(img, src, dst):
 
     # Compute and apply perpective transform
@@ -8,7 +11,6 @@ def warper(img, src, dst):
     return warped
 
 def abs_sobel_thresh(img, orient='x', sobel_kernel=3, thresh=(0, 255)):
-    # Convert to grayscale
     gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
     # Apply x or y gradient with the OpenCV Sobel() function
     # and take the absolute value
@@ -27,7 +29,7 @@ def abs_sobel_thresh(img, orient='x', sobel_kernel=3, thresh=(0, 255)):
     # Return the result
     return binary_output
 
-def thresh(img, sobel_kernel=3, thresh=(0, 255)):   
+def grad_thresh(img, sobel_kernel=3, thresh=(0, 255)):   
     gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
     sobelx = cv2.Sobel(gray, cv2.CV_64F, 1, 0, ksize = sobel_kernel)
     sobely = cv2.Sobel(gray, cv2.CV_64F, 0, 1, ksize = sobel_kernel)
@@ -37,11 +39,18 @@ def thresh(img, sobel_kernel=3, thresh=(0, 255)):
     binary_output[(scaled_sobel >= thresh[0]) & (scaled_sobel <= thresh[1])] = 1
     return binary_output
 
-def dir_threshold(img, sobel_kernel=3, thresh=(0, np.pi/2)):
+def dir_thresh(img, sobel_kernel=3, thresh=(0, np.pi/2)):
     gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
     sobelx = cv2.Sobel(gray, cv2.CV_64F, 1, 0, ksize = sobel_kernel)
     sobely = cv2.Sobel(gray, cv2.CV_64F, 0, 1, ksize = sobel_kernel)
     grad = np.arctan2(np.absolute(sobely), np.absolute(sobelx))
     binary_output = np.zeros_like(grad)
     binary_output[(grad >= thresh[0]) & (grad <= thresh[1])] = 1
+    return binary_output
+
+def hls_select(img, thresh=(0, 255)):
+    hls = cv2.cvtColor(img, cv2.COLOR_RGB2HLS)
+    s_channel = hls[:,:,2]
+    binary_output = np.zeros_like(s_channel)
+    binary_output[(s_channel > thresh[0]) & (s_channel <= thresh[1])] = 1
     return binary_output
