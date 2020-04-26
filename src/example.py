@@ -2,8 +2,7 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-
-def bird_eye_view(img, src, dst):
+def perspective_transform(img, src, dst):
 
     # Compute and apply perpective transform
     img_size = (img.shape[1], img.shape[0])
