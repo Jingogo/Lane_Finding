@@ -170,7 +170,7 @@ def fit_polynomial(binary_warped):
     plt.plot(left_fitx, ploty, color='yellow')
     plt.plot(right_fitx, ploty, color='yellow')
 
-    return out_img
+    return ploty, left_fitx, right_fitx, out_img
 
 def fit_polynomial_actual(binary_warped, ym_per_pix, xm_per_pix):
     leftx, lefty, rightx, righty, out_img = find_lane_pixels(binary_warped)
@@ -180,7 +180,7 @@ def fit_polynomial_actual(binary_warped, ym_per_pix, xm_per_pix):
     return left_fit_cr, right_fit_cr
 
     
-def measure_curvature_real(binary_warped, ym_per_pix, xm_per_pix):
+def measure_curvature_real(binary_warped):
     '''
     Calculates the curvature of polynomial functions in meters.
     '''
