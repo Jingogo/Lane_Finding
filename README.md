@@ -25,7 +25,7 @@ The steps of this project are the following:
 <img src="./data/output/bird_eye/test2_birdiew.jpg" width="300">
 
 ## 5. Fit a polynomial 
-<img src="./data/output/poly/straight_lines1_poli.jpg" width="300">
+<img src="./data/output/poly/straight_lines1_poli.jpg" width="600">
 
 ## 6. Mark the detected lane in the orignal image
 <img src="./data/output/lane/test2_lane.jpg" width="300">
