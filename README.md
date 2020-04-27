@@ -14,7 +14,7 @@ The steps of this project are the following:
 
 ## 1. Camera Calibration
 
-![distorted chessboard](./data/test_cal/test_image.jpg =300x)
+![distorted chessboard](./data/test_cal/test_image.jpg)
 ![undistorted chessboard](./data/test_cal/test_undist.jpg =300x)
 
 ## 2. Apply a distortion correction to raw images.
