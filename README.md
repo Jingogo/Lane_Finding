@@ -13,6 +13,8 @@ The steps of this project are the following:
 
 
 ## 1. Camera Calibration
+<img src="./data/test_cal/test_image.jpg" width="300">
+
 
 ![distorted chessboard](./data/test_cal/test_image.jpg)
 ![undistorted chessboard](./data/test_cal/test_undist.jpg =300x)
