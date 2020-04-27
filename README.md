@@ -16,17 +16,17 @@ The steps of this project are the following:
 <img src="./data/test_cal/test_image.jpg" width="300"> <img src="./data/test_cal/test_undist.jpg" width="300">
 
 ## 2. Apply a distortion correction to raw images.
-<img src="./data/test_cal/straight_lines1.jpg" width="300"><img src="./data/test_cal/straight_lines1_undist.jpg" width="300">
+<img src="./data/test_street_imgs/test2.jpg" width="300"> <img src="./data/output/undist/test2_undist.jpg" width="300">
 
 ## 3. Create a thresholded binary image
-<img src="./data/test_cal/straight_lines1_binary.jpg" width="300">
+<img src="./data/output/binary/test2_binary.jpg" width="300">
 
 ## 4. Apply a perspective transformation
-<img src="./data/test_cal/straight_lines1_bird_eye.jpg" width="300">
+<img src="./data/output/bird_eye/test2_birdiew.jpg" width="300">
 
 ## 5. Fit a polynomial 
-<img src="./data/test_cal/straight_lines1_poli.jpg" width="300">
+<img src="./data/output/poly/straight_lines1_poli.jpg" width="300">
 
 ## 6. Mark the detected lane in the orignal image
-<img src="./data/test/../test_cal/straight_lines1_lane" width="300">
+<img src="./data/output/lane/test2_lane.jpg" width="300">
 
