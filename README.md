@@ -13,7 +13,7 @@ The steps of this project are the following:
 
 
 ## 1. Camera Calibration
-<img src="./data/test_cal/test_image.jpg" width="300">
+<img src="./data/test_cal/test_image.jpg" alt="distorted" width="300">
 <img src="./data/test_cal/test_undist.jpg" width="300">
 
 ## 2. Apply a distortion correction to raw images.
